@@ -1,3 +1,10 @@
+let tempf = 84
 while (true) {
-    console.log("Temperature (F): " + input.temperature(TemperatureUnit.Fahrenheit) + " - Temperature (C): " + input.temperature(TemperatureUnit.Celsius) + " Current Room Temperature: 95°F - 35°C ")
+    console.log("temperature" + input.temperature(TemperatureUnit.Fahrenheit))
+    if (input.temperature(TemperatureUnit.Fahrenheit) > tempf) {
+        light.setPixelColor(5, light.rgb(255, 0, 0))
+    } else {
+        light.clear()
+    }
+    
 }
